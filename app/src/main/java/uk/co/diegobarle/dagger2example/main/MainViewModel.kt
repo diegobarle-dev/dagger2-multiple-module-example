@@ -1,5 +1,6 @@
 package uk.co.diegobarle.dagger2example.main
 
+import androidx.lifecycle.ViewModel
 import uk.co.diegobarle.backend.model.HeavyDetails
 import uk.co.diegobarle.backend.model.UserMessage
 import uk.co.diegobarle.backend.network.Result
@@ -9,7 +10,7 @@ import javax.inject.Inject
 
 class MainViewModel @Inject constructor(
     @MainHeavy private val heavyDetails: HeavyDetails,
-    private val rep: MessageRepository){
+    private val rep: MessageRepository): ViewModel() {
 
     val title: String
         get() {

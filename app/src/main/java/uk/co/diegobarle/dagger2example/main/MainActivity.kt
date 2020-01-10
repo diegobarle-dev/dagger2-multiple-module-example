@@ -4,17 +4,18 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+import androidx.lifecycle.ViewModelProviders
 import kotlinx.android.synthetic.main.activity_main.*
-import uk.co.diegobarle.dagger2example.Dagger2ExampleApp
 import uk.co.diegobarle.dagger2example.R
-import javax.inject.Inject
+import uk.co.diegobarle.dagger2example.di.injector
 
 class MainActivity : AppCompatActivity() {
 
-    @Inject lateinit var mainViewModel: MainViewModel
+    private val mainViewModel by lazy {
+        ViewModelProviders.of(this, injector.mainViewModelFactory()).get(MainViewModel::class.java)
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        (application as Dagger2ExampleApp).appComponent.inject(this)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
