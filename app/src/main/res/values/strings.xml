@@ -1,4 +1,4 @@
 <resources>
-    <string name="app_name">Dagger2Example</string>
+    <string name="app_name">Dagger2 Multiple Modules</string>
     <string name="send">Send</string>
 </resources>
