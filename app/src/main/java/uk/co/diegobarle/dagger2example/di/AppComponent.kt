@@ -3,11 +3,12 @@ package uk.co.diegobarle.dagger2example.di
 import android.content.Context
 import dagger.BindsInstance
 import dagger.Component
+import uk.co.diegobarle.backend.di.CoreModule
 import uk.co.diegobarle.dagger2example.main.MainViewModel
 import javax.inject.Singleton
 
 @Singleton
-@Component(modules = [HeavyModule::class])
+@Component(modules = [CoreModule::class, HeavyModule::class])
 interface AppComponent{
 
     @Component.Builder
