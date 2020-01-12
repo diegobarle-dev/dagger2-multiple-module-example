@@ -6,7 +6,7 @@ import uk.co.diegobarle.backend.network.SendMessage
 import uk.co.diegobarle.backend.network.SendMessage1
 
 @Module
-class MessageModule {
+class CoreModule {
 
     @Provides
     fun provideSendMessage(): SendMessage {

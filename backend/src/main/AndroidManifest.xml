@@ -2,7 +2,7 @@
     package="uk.co.diegobarle.backend">
 
     <application
-        android:name=".BackendApp">
+        android:name=".CoreApp">
 
     </application>
 
